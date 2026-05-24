@@ -3,6 +3,7 @@ import { Hero } from '@/components/hero'
 import { CompanySlider } from '@/components/company-slider'
 import { Stats } from '@/components/stats'
 import { Process } from '@/components/process'
+import { Pricing } from '@/components/pricing'
 import { Portfolio } from '@/components/portfolio'
 import { Testimonials } from '@/components/testimonials'
 import { FAQ } from '@/components/faq'
@@ -17,6 +18,7 @@ export default function Home() {
       <CompanySlider />
       <Stats />
       <Process />
+      <Pricing />
       <Portfolio />
       <Testimonials />
       <FAQ />

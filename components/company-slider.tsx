@@ -62,7 +62,7 @@ export function CompanySlider() {
   )
 
   return (
-    <section className="w-full relative bg-background">
+    <section id="services" className="w-full relative bg-background">
       <Carousel
         opts={{
           align: 'start',
