@@ -4,32 +4,52 @@ import Image from 'next/image'
 
 const projects = [
   {
-    title: 'Enterprise ERP Solution',
-    category: 'Software Development',
-    description: 'A comprehensive ERP system for a global manufacturing firm, optimizing supply chain and inventory.',
-    client: 'Industrial Dynamics',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'
+    title: 'Winbox Consulting',
+    category: 'Corporate Website & Training Platform',
+    description: 'A public-facing consulting platform for behavioural change services, trainings, certifications, events, proposals, and client engagement.',
+    client: 'WINBOX',
+    url: 'https://winbox.ng/',
+    image: 'https://plus.unsplash.com/premium_photo-1707155465527-c5a2935b21cc?auto=format&fit=crop&q=80&w=800'
   },
   {
-    title: 'IoT Smart City Hub',
-    category: 'Smart Tech & IoT',
-    description: 'Real-time monitoring and automation platform for urban infrastructure management.',
-    client: 'Metropolis Tech',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800'
+    title: 'CLEOHN LTD',
+    category: 'Business Registration Website',
+    description: 'A professional CAC registration website for business names, companies, NGOs, TIN, SCUML, trademarks, printing, and compliance support.',
+    client: 'CLEOHN',
+    url: 'https://www.cleohnltd.com/',
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=800'
   },
   {
-    title: 'FinTech Digital Platform',
-    category: 'Web Development',
-    description: 'Secure and scalable banking application with advanced analytics and AI-driven insights.',
-    client: 'Nexus Finance',
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800'
+    title: 'The Nest Church',
+    category: 'Church & Community Website',
+    description: 'A church website for live worship, giving, prayer requests, stories, blog content, ministries, community signups, and service information.',
+    client: 'THE NEST',
+    url: 'https://thenestexpression.com/',
+    image: 'https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80&w=800'
   },
   {
-    title: 'Corporate Brand Experience',
-    category: 'Digital Experience',
-    description: 'Immersive brand storytelling through high-performance web design and strategy.',
-    client: 'Aura Premium',
-    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=800'
+    title: 'Parara Music School',
+    category: 'Education Website & Course Platform',
+    description: 'A music school website for Lagos and online lessons, course discovery, packages, instruments, testimonials, and student registration.',
+    client: 'PARARA',
+    url: 'https://pararamusicschool.com/',
+    image: 'https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    title: 'Zelaxh',
+    category: 'Fashion E-commerce Platform',
+    description: 'A modern shopping experience for African wears, gym outfits, handcrafted clothing, product browsing, and fashion deals.',
+    client: 'ZELAXH',
+    url: 'http://zelaxh.com/',
+    image: 'https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    title: 'Imperial Lights College',
+    category: 'School Website & Admissions Portal',
+    description: 'A school website for admissions, academic programs, facilities, gallery, accreditation, contact information, and parent/student portal access.',
+    client: 'ILC',
+    url: 'https://imperiallightscollege.com/',
+    image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800'
   }
 ]
 
@@ -42,14 +62,17 @@ export function Portfolio() {
             Our Portfolio
           </h2>
           <p className="text-lg text-muted-foreground">
-            Showcasing our latest projects and the transformative results we deliver for our clients.
+            Real websites and digital platforms we have delivered for businesses, schools, churches, and commerce brands.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
-            <div
+            <a
               key={project.title}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group rounded-xl overflow-hidden border border-border/50 hover:border-border transition-all duration-300 hover:shadow-lg cursor-pointer flex flex-col h-full"
             >
               <div className="w-full h-64 relative overflow-hidden bg-muted">
@@ -85,7 +108,7 @@ export function Portfolio() {
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
@@ -93,8 +116,9 @@ export function Portfolio() {
           <Button
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 h-12 text-base shadow-lg shadow-primary/20"
+            asChild
           >
-            View All Projects
+            <a href="#contact">Start a Project</a>
           </Button>
         </div>
       </div>

@@ -24,7 +24,7 @@ export function CTA() {
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-8"
                 asChild
               >
-                <Link href="mailto:hello@digitalaxis.com" className="flex items-center gap-2">
+                <Link href="mailto:geetrixtechnologies@gmail.com" className="flex items-center gap-2">
                   Get Started Today
                   <ArrowRight className="w-5 h-5" />
                 </Link>
@@ -35,7 +35,7 @@ export function CTA() {
                 className="border-primary text-primary hover:bg-primary/5"
                 asChild
               >
-                <Link href="tel:+1234567890">Schedule a Call</Link>
+                <Link href="tel:+2349018021613">Schedule a Call</Link>
               </Button>
             </div>
           </div>

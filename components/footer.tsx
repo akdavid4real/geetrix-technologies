@@ -93,20 +93,25 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                <a href="mailto:info@geetrix.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  info@geetrix.com
+                <a href="mailto:geetrixtechnologies@gmail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  geetrixtechnologies@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                <a href="tel:+1234567890" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  +1 (234) 567-890
-                </a>
+                <div className="flex flex-col gap-1">
+                  <a href="tel:+2349018021613" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    09018021613
+                  </a>
+                  <a href="tel:+2348035005924" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    08035005924
+                  </a>
+                </div>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                 <span className="text-sm text-muted-foreground">
-                  123 Digital Street<br />Tech City, TC 12345
+                  8 Ogunubi,<br />Egbeda-Akowonjo Road
                 </span>
               </li>
             </ul>
