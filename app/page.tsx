@@ -9,21 +9,26 @@ import { Testimonials } from '@/components/testimonials'
 import { FAQ } from '@/components/faq'
 import { CTA } from '@/components/cta'
 import { Footer } from '@/components/footer'
+import { readHomepageContent } from '@/lib/homepage-content'
 
-export default function Home() {
+export const dynamic = 'force-dynamic'
+
+export default async function Home() {
+  const content = await readHomepageContent()
+
   return (
     <main className="min-h-screen bg-background">
-      <Header />
-      <Hero />
-      <CompanySlider />
-      <Stats />
-      <Process />
-      <Pricing />
-      <Portfolio />
-      <Testimonials />
-      <FAQ />
-      <CTA />
-      <Footer />
+      <Header content={content.header} />
+      <Hero content={content.hero} />
+      <CompanySlider content={content.companySlider} />
+      <Stats content={content.stats} />
+      <Process content={content.process} />
+      <Pricing content={content.pricing} />
+      <Portfolio content={content.portfolio} />
+      <Testimonials content={content.testimonials} />
+      <FAQ content={content.faq} />
+      <CTA content={content.cta} />
+      <Footer content={content.footer} brandName={content.header.brandName} />
     </main>
   )
 }

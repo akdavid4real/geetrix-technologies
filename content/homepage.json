@@ -1,0 +1,500 @@
+{
+  "metadata": {
+    "title": "Geetrix Technologies | Innovative Tech Solutions",
+    "description": "Empowering businesses with cutting-edge web development, software engineering, and digital transformation solutions."
+  },
+  "header": {
+    "brandName": "Geetrix Technologies",
+    "ctaLabel": "Get Started",
+    "navLinks": [
+      {
+        "label": "Services",
+        "href": "#services"
+      },
+      {
+        "label": "Pricing",
+        "href": "#pricing"
+      },
+      {
+        "label": "Portfolio",
+        "href": "#portfolio"
+      },
+      {
+        "label": "Testimonials",
+        "href": "#testimonials"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Innovate. Transform. Succeed with Geetrix.",
+    "highlightedText": "Succeed with Geetrix.",
+    "description": "Geetrix Technologies delivers high-performance web applications, bespoke software solutions, and data-driven digital strategies designed to scale your business and outpace the competition.",
+    "primaryCtaLabel": "Start Your Project",
+    "secondaryCtaLabel": "View Our Work",
+    "metrics": [
+      {
+        "value": "50+",
+        "label": "Projects Completed"
+      },
+      {
+        "value": "35+",
+        "label": "Happy Clients"
+      },
+      {
+        "value": "5+",
+        "label": "Years Experience"
+      }
+    ]
+  },
+  "companySlider": {
+    "items": [
+      {
+        "title": "Enterprise Software Development",
+        "description": "We build scalable, secure, and robust software solutions tailored to your unique business requirements.",
+        "features": [
+          "Custom ERP/CRM Systems",
+          "API Integration & Development",
+          "Cloud Architecture",
+          "Legacy System Modernization"
+        ],
+        "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
+        "icon": "Code",
+        "color": "primary"
+      },
+      {
+        "title": "Digital Experience Platforms",
+        "description": "Create immersive customer journeys with our advanced web design and development services.",
+        "features": [
+          "Next.js & React Applications",
+          "Headless CMS Solutions",
+          "User Experience (UX) Design",
+          "Mobile-First Development"
+        ],
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+        "icon": "Megaphone",
+        "color": "accent"
+      },
+      {
+        "title": "Smart Tech & IoT Solutions",
+        "description": "Leverage the power of connected devices and automation to streamline your operations.",
+        "features": [
+          "IoT Product Prototype",
+          "Custom Automation Tools",
+          "Edge Computing Solutions",
+          "Hardware-Software Integration"
+        ],
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop",
+        "icon": "Smartphone",
+        "color": "primary"
+      }
+    ],
+    "ctaLabel": "Start Your Project"
+  },
+  "stats": {
+    "items": [
+      {
+        "value": "50+",
+        "label": "Projects Completed",
+        "description": "Diverse projects across industries",
+        "icon": "Target"
+      },
+      {
+        "value": "35+",
+        "label": "Happy Clients",
+        "description": "Trusted by growing businesses",
+        "icon": "Users"
+      },
+      {
+        "value": "5+",
+        "label": "Years Experience",
+        "description": "Proven track record of success",
+        "icon": "Zap"
+      }
+    ]
+  },
+  "process": {
+    "title": "Our Process",
+    "description": "A systematic approach to delivering exceptional results for every project.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Discovery & Strategy",
+        "description": "We dive deep into understanding your business, goals, and target audience to create a customized strategy.",
+        "icon": "Target"
+      },
+      {
+        "number": "02",
+        "title": "Design & Planning",
+        "description": "Our team designs mockups and outlines a detailed project plan with clear timelines and deliverables.",
+        "icon": "Pencil"
+      },
+      {
+        "number": "03",
+        "title": "Development & Creation",
+        "description": "We bring the design to life using cutting-edge technologies and best practices in web development.",
+        "icon": "Cog"
+      },
+      {
+        "number": "04",
+        "title": "Testing & Optimization",
+        "description": "Rigorous testing ensures everything works perfectly across all devices and browsers.",
+        "icon": "Search"
+      },
+      {
+        "number": "05",
+        "title": "Launch & Support",
+        "description": "We deploy your project and provide ongoing support to ensure continued success.",
+        "icon": "Rocket"
+      },
+      {
+        "number": "06",
+        "title": "Growth & Analytics",
+        "description": "Monitor performance, analyze data, and continuously improve for maximum impact.",
+        "icon": "Chart"
+      }
+    ],
+    "noteTitle": "Client-Centric Approach",
+    "noteDescription": "Throughout every step, we maintain open communication and involve you in key decisions. Your feedback shapes the outcome, ensuring the final product exceeds your expectations."
+  },
+  "pricing": {
+    "eyebrow": "Pricing Plans",
+    "title": "Elevate Your Digital Presence",
+    "description": "Practical, transparent pricing for world-class development by Geetrix Technologies. Choose the plan that fits your vision.",
+    "plans": [
+      {
+        "label": "Personal",
+        "title": "Basic Websites",
+        "price": "N80,000 - N120,000",
+        "note": "Personal / Profile Pages",
+        "features": [
+          "Personal / Profile Pages",
+          "Landing Pages (CTA focused)",
+          "Portfolio Websites"
+        ]
+      },
+      {
+        "label": "Corporate",
+        "title": "Business Solutions",
+        "price": "N150,000 - N250,000",
+        "note": "*Maintenance fee for Church sites",
+        "popular": true,
+        "features": [
+          "Small Business (4-6 pages)",
+          "Company / Corporate Site",
+          "Church / NGO Portals"
+        ]
+      },
+      {
+        "label": "Enterprise",
+        "title": "Management Systems",
+        "price": "Starting from N500,000",
+        "note": "*Monthly Maintenance applies",
+        "features": [
+          "School / Church Management",
+          "Estate / Hostel Management",
+          "Online Clearance Systems"
+        ]
+      }
+    ],
+    "standardsTitle": "Premium Standards",
+    "standardsDescription": "Included in every project we deliver.",
+    "standards": [
+      {
+        "title": "Fully Responsive",
+        "description": "Optimized for mobile, tablet, and desktop screens.",
+        "icon": "MonitorSmartphone"
+      },
+      {
+        "title": "SEO Ready",
+        "description": "Built-in best practices to help you rank on Google.",
+        "icon": "Search"
+      },
+      {
+        "title": "Secure & Safe",
+        "description": "Advanced security protocols to protect your data.",
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": "High Performance",
+        "description": "Fast load times for better user retention.",
+        "icon": "Zap"
+      }
+    ],
+    "tableTitle": "Practical Price List",
+    "priceRows": [
+      {
+        "group": "Basic Websites",
+        "type": "Personal / Profile Page",
+        "description": "1-2 pages, bio, links",
+        "price": "Starting from N80k"
+      },
+      {
+        "group": "Basic Websites",
+        "type": "Landing Page",
+        "description": "CTA focused, ads ready",
+        "price": "Starting from N100k"
+      },
+      {
+        "group": "Basic Websites",
+        "type": "Portfolio Website",
+        "description": "Projects + contact",
+        "price": "Starting from N120k"
+      },
+      {
+        "group": "Business Websites",
+        "type": "Small Business Website",
+        "description": "4-6 pages",
+        "price": "Starting from N150k"
+      },
+      {
+        "group": "Business Websites",
+        "type": "Company Website",
+        "description": "About, services, blog",
+        "price": "Starting from N250k"
+      },
+      {
+        "group": "Business Websites",
+        "type": "Church Website",
+        "description": "Events, sermons, giving",
+        "price": "Starting from N250k*"
+      },
+      {
+        "group": "Management Systems",
+        "type": "School Management System",
+        "description": "Students, results, staff",
+        "price": "Starting from N500k"
+      },
+      {
+        "group": "Management Systems",
+        "type": "Church Management System",
+        "description": "Members, attendance",
+        "price": "Starting from N500k"
+      },
+      {
+        "group": "Management Systems",
+        "type": "Hostel / Estate System",
+        "description": "Payments, allocations",
+        "price": "Starting from N500k"
+      },
+      {
+        "group": "Management Systems",
+        "type": "Online Clearance System",
+        "description": "Workflow approvals",
+        "price": "Starting from N500k"
+      },
+      {
+        "group": "Advanced / Custom Systems",
+        "type": "E-commerce Website",
+        "description": "Online store",
+        "price": "Starting from N500k"
+      },
+      {
+        "group": "Advanced / Custom Systems",
+        "type": "Custom Web App",
+        "description": "Bespoke functionality",
+        "price": "Starting from N1M"
+      },
+      {
+        "group": "Advanced / Custom Systems",
+        "type": "SaaS / Platform MVP",
+        "description": "Scalable platform",
+        "price": "Starting from N1.5M"
+      }
+    ],
+    "footnote": "* Monthly Maintenance Fee applies for complex systems and specific business types."
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "description": "Real websites and digital platforms we have delivered for businesses, schools, churches, and commerce brands.",
+    "projects": [
+      {
+        "title": "Winbox Consulting",
+        "category": "Corporate Website & Training Platform",
+        "description": "A public-facing consulting platform for behavioural change services, trainings, certifications, events, proposals, and client engagement.",
+        "client": "WINBOX",
+        "url": "https://winbox.ng/",
+        "image": "https://plus.unsplash.com/premium_photo-1707155465527-c5a2935b21cc?auto=format&fit=crop&q=80&w=800"
+      },
+      {
+        "title": "CLEOHN LTD",
+        "category": "Business Registration Website",
+        "description": "A professional CAC registration website for business names, companies, NGOs, TIN, SCUML, trademarks, printing, and compliance support.",
+        "client": "CLEOHN",
+        "url": "https://www.cleohnltd.com/",
+        "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=800"
+      },
+      {
+        "title": "The Nest Church",
+        "category": "Church & Community Website",
+        "description": "A church website for live worship, giving, prayer requests, stories, blog content, ministries, community signups, and service information.",
+        "client": "THE NEST",
+        "url": "https://thenestexpression.com/",
+        "image": "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80&w=800"
+      },
+      {
+        "title": "Parara Music School",
+        "category": "Education Website & Course Platform",
+        "description": "A music school website for Lagos and online lessons, course discovery, packages, instruments, testimonials, and student registration.",
+        "client": "PARARA",
+        "url": "https://pararamusicschool.com/",
+        "image": "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&q=80&w=800"
+      },
+      {
+        "title": "Zelaxh",
+        "category": "Fashion E-commerce Platform",
+        "description": "A modern shopping experience for African wears, gym outfits, handcrafted clothing, product browsing, and fashion deals.",
+        "client": "ZELAXH",
+        "url": "http://zelaxh.com/",
+        "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&q=80&w=800"
+      },
+      {
+        "title": "Okt Logistics LTD",
+        "category": "School Website & Admissions Portal",
+        "description": "A school website for admissions, academic programs, facilities, gallery, accreditation, contact information, and parent/student portal access.",
+        "client": "Okt Logistics",
+        "url": "https://oktlogisticsltd.com/",
+        "image": "https://oktlogisticsltd.com/wp-content/uploads/2025/08/2.jpg"
+      }
+    ],
+    "ctaLabel": "Start a Project"
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "description": "Real feedback from real clients who have experienced transformation with us.",
+    "items": [
+      {
+        "name": "Ayomide Temidayo",
+        "company": "Fashion Boutique Co.",
+        "role": "Owner",
+        "content": "The team transformed our online presence. Our sales increased by 150% in the first quarter after launching the new website.",
+        "rating": 5
+      },
+      {
+        "name": "Bola John",
+        "company": "Tech Startup Inc.",
+        "role": "Marketing Director",
+        "content": "Their digital marketing strategy was game-changing. The social media campaign reached an audience of over 500,000 people.",
+        "rating": 5
+      },
+      {
+        "name": "Emmanuel Chidinma",
+        "company": "Manufacturing Solutions Ltd.",
+        "role": "CEO",
+        "content": "Professional, creative, and results-driven. They understood our business goals and delivered beyond expectations.",
+        "rating": 5
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to common questions about our services and process.",
+    "items": [
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Project timelines vary depending on scope and complexity. A basic website typically takes 4-8 weeks, while larger projects may take 3-6 months. We provide detailed timelines during the discovery phase."
+      },
+      {
+        "question": "What is your pricing model?",
+        "answer": "We offer flexible pricing options including fixed-price projects, hourly rates, and retainer packages. Pricing depends on your specific needs and project scope. We provide a detailed quote after understanding your requirements."
+      },
+      {
+        "question": "Do you provide ongoing support after launch?",
+        "answer": "Yes! We offer maintenance and support packages to ensure your website or marketing campaigns continue to perform well. This includes updates, security patches, content updates, and performance optimization."
+      },
+      {
+        "question": "Can you help with my existing website?",
+        "answer": "Absolutely. We can redesign, optimize, or migrate your existing website. We also provide SEO audits, performance optimization, and digital marketing services for established sites."
+      },
+      {
+        "question": "What technologies do you use?",
+        "answer": "We use modern, industry-leading technologies including React, Next.js, TypeScript, Tailwind CSS, and various backend solutions."
+      },
+      {
+        "question": "How do you measure success?",
+        "answer": "We establish clear KPIs during the discovery phase aligned with your business goals. We then track metrics like traffic, conversions, engagement, and ROI through analytics dashboards and regular reporting."
+      }
+    ],
+    "contactCardTitle": "Didn't find your answer?",
+    "contactCardDescription": "Contact us directly and our team will be happy to help you out.",
+    "contactCardLabel": "Get in Touch ->"
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business?",
+    "description": "Let's work together to create something extraordinary. Get in touch with our team and discover how we can elevate your brand.",
+    "primaryLabel": "Get Started Today",
+    "primaryHref": "mailto:geetrixtechnologies@gmail.com",
+    "secondaryLabel": "Schedule a Call",
+    "secondaryHref": "tel:+2349018021613"
+  },
+  "footer": {
+    "brandDescription": "Transforming businesses through web development, digital marketing, and innovative technology solutions.",
+    "serviceLinks": [
+      {
+        "label": "Web Development",
+        "href": "#services"
+      },
+      {
+        "label": "Digital Marketing",
+        "href": "#services"
+      },
+      {
+        "label": "Web Design",
+        "href": "#services"
+      },
+      {
+        "label": "Technology Solutions",
+        "href": "#services"
+      }
+    ],
+    "companyLinks": [
+      {
+        "label": "Portfolio",
+        "href": "#portfolio"
+      },
+      {
+        "label": "About Us",
+        "href": "#"
+      },
+      {
+        "label": "Blog",
+        "href": "#"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
+    ],
+    "email": "geetrixtechnologies@gmail.com",
+    "phones": [
+      "09018021613",
+      "08035005924"
+    ],
+    "addressLines": [
+      "8 Ogunubi,",
+      "Egbeda-Akowonjo Road"
+    ],
+    "socialLinks": [
+      {
+        "platform": "LinkedIn",
+        "href": "#"
+      },
+      {
+        "platform": "Twitter",
+        "href": "#"
+      },
+      {
+        "platform": "Facebook",
+        "href": "#"
+      }
+    ]
+  },
+  "whatsapp": {
+    "phoneNumber": "2348035005924",
+    "message": "Hello Geetrix Technologies! I would like to inquire about your services.",
+    "tooltip": "Chat with us"
+  }
+}

@@ -1,33 +1,24 @@
-import { Zap, Target, Users } from 'lucide-react'
+import { Target, Users, Zap } from 'lucide-react'
+import type { HomepageContent } from '@/lib/homepage-content'
 
-const stats = [
-  {
-    value: '50+',
-    label: 'Projects Completed',
-    description: 'Diverse projects across industries',
-    icon: Target
-  },
-  {
-    value: '35+',
-    label: 'Happy Clients',
-    description: 'Trusted by growing businesses',
-    icon: Users
-  },
-  {
-    value: '5+',
-    label: 'Years Experience',
-    description: 'Proven track record of success',
-    icon: Zap
-  }
-]
+const iconMap = {
+  Target,
+  Users,
+  Zap,
+}
 
-export function Stats() {
+type StatsProps = {
+  content: HomepageContent['stats']
+}
+
+export function Stats({ content }: StatsProps) {
   return (
     <section className="py-16 md:py-24 bg-gradient-to-br from-accent/10 to-primary/10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-          {stats.map((stat) => {
-            const Icon = stat.icon
+          {content.items.map((stat) => {
+            const Icon = iconMap[stat.icon]
+
             return (
               <div key={stat.label} className="text-center">
                 <div className="flex justify-center mb-4">

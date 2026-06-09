@@ -1,8 +1,15 @@
 import Link from 'next/link'
-import { Button } from './ui/button'
 import { ArrowRight } from 'lucide-react'
+import { Button } from './ui/button'
+import type { HomepageContent } from '@/lib/homepage-content'
 
-export function Hero() {
+type HeroProps = {
+  content: HomepageContent['hero']
+}
+
+export function Hero({ content }: HeroProps) {
+  const titleWithoutHighlight = content.title.replace(content.highlightedText, '').trim()
+
   return (
     <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl -z-10"></div>
@@ -11,10 +18,11 @@ export function Hero() {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight text-balance">
-            Innovate. Transform. <span className="text-primary">Succeed with Geetrix.</span>
+            {titleWithoutHighlight}{' '}
+            <span className="text-primary">{content.highlightedText}</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto text-balance">
-            Geetrix Technologies delivers high-performance web applications, bespoke software solutions, and data-driven digital strategies designed to scale your business and outpace the competition.
+            {content.description}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -24,7 +32,7 @@ export function Hero() {
               asChild
             >
               <Link href="#contact" className="flex items-center gap-2">
-                Start Your Project
+                {content.primaryCtaLabel}
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
@@ -34,23 +42,17 @@ export function Hero() {
               className="border-border text-foreground hover:bg-secondary"
               asChild
             >
-              <Link href="#portfolio">View Our Work</Link>
+              <Link href="#portfolio">{content.secondaryCtaLabel}</Link>
             </Button>
           </div>
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 border-t border-border">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">50+</div>
-              <p className="text-muted-foreground">Projects Completed</p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">35+</div>
-              <p className="text-muted-foreground">Happy Clients</p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">5+</div>
-              <p className="text-muted-foreground">Years Experience</p>
-            </div>
+            {content.metrics.map((metric) => (
+              <div key={metric.label} className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">{metric.value}</div>
+                <p className="text-muted-foreground">{metric.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

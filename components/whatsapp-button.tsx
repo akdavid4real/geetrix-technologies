@@ -1,24 +1,22 @@
-'use client'
-
 import { MessageCircle } from 'lucide-react'
+import { readHomepageContent } from '@/lib/homepage-content'
 
-export function WhatsAppButton() {
-    const phoneNumber = '2348035005924'
-    const message = 'Hello Geetrix Technologies! I would like to inquire about your services.'
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+export async function WhatsAppButton() {
+  const content = await readHomepageContent()
+  const whatsappUrl = `https://wa.me/${content.whatsapp.phoneNumber}?text=${encodeURIComponent(content.whatsapp.message)}`
 
-    return (
-        <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-lg hover:bg-[#128C7E] transition-all duration-300 transform hover:scale-110 group focus:outline-none focus:ring-4 focus:ring-[#25D366]/50"
-            aria-label="Chat on WhatsApp"
-        >
-            <MessageCircle className="w-8 h-8" />
-            <span className="absolute right-full mr-3 bg-white text-gray-800 text-sm font-medium py-1.5 px-3 rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                Chat with us
-            </span>
-        </a>
-    )
+  return (
+    <a
+      href={whatsappUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-[#128C7E] group focus:outline-none focus:ring-4 focus:ring-[#25D366]/50"
+      aria-label="Chat on WhatsApp"
+    >
+      <MessageCircle className="h-8 w-8" />
+      <span className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-lg bg-white px-3 py-1.5 text-sm font-medium text-gray-800 opacity-0 shadow-md transition-opacity group-hover:opacity-100">
+        {content.whatsapp.tooltip}
+      </span>
+    </a>
+  )
 }

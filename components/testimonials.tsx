@@ -1,54 +1,35 @@
-import { Card, CardContent } from './ui/card'
 import { Star } from 'lucide-react'
+import { Card, CardContent } from './ui/card'
+import type { HomepageContent } from '@/lib/homepage-content'
 
-const testimonials = [
-  {
-    name: 'Sarah Johnson',
-    company: 'Fashion Boutique Co.',
-    role: 'Owner',
-    content: 'The team transformed our online presence. Our sales increased by 150% in the first quarter after launching the new website.',
-    rating: 5
-  },
-  {
-    name: 'Marcus Chen',
-    company: 'Tech Startup Inc.',
-    role: 'Marketing Director',
-    content: 'Their digital marketing strategy was game-changing. The social media campaign reached an audience of over 500,000 people.',
-    rating: 5
-  },
-  {
-    name: 'Elena Rodriguez',
-    company: 'Manufacturing Solutions Ltd.',
-    role: 'CEO',
-    content: 'Professional, creative, and results-driven. They understood our business goals and delivered beyond expectations.',
-    rating: 5
-  }
-]
+type TestimonialsProps = {
+  content: HomepageContent['testimonials']
+}
 
-export function Testimonials() {
+export function Testimonials({ content }: TestimonialsProps) {
   return (
     <section id="testimonials" className="py-20 md:py-32 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-            What Our Clients Say
+            {content.title}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Real feedback from real clients who have experienced transformation with us.
+            {content.description}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
-            <Card 
-              key={testimonial.name}
+          {content.items.map((testimonial) => (
+            <Card
+              key={`${testimonial.name}-${testimonial.company}`}
               className="border-border/50 bg-card/50 backdrop-blur hover:border-border transition-all duration-300"
             >
               <CardContent className="pt-6">
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star 
-                      key={i} 
+                    <Star
+                      key={i}
                       className="w-4 h-4 fill-primary text-primary"
                     />
                   ))}
