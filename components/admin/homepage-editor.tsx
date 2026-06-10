@@ -166,7 +166,7 @@ export function HomepageEditor({ initialContent }: HomepageEditorProps) {
         <div>
           <h1 className="text-3xl font-bold text-foreground">Homepage Admin</h1>
           <p className="mt-1 text-sm text-muted-foreground">
-            Edit the homepage from grouped tabs. Changes save into `content/homepage.json`.
+            Edit the homepage from grouped tabs. Production changes save to configured Blob storage.
           </p>
         </div>
         <div className="flex gap-3">

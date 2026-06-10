@@ -1,5 +1,6 @@
 import { promises as fs } from 'fs'
 import path from 'path'
+import { head, put } from '@vercel/blob'
 import { z } from 'zod'
 
 const linkSchema = z.object({
@@ -175,9 +176,45 @@ const homepageContentSchema = z.object({
 
 export type HomepageContent = z.infer<typeof homepageContentSchema>
 
+const blobPath = 'homepage.json'
 const contentPath = path.join(process.cwd(), 'content', 'homepage.json')
 
+function hasBlobConfig() {
+  return Boolean(process.env.BLOB_READ_WRITE_TOKEN)
+}
+
+async function readHomepageContentFromBlob() {
+  const blob = await head(blobPath)
+  const response = await fetch(blob.url, { cache: 'no-store' })
+
+  if (!response.ok) {
+    throw new Error(`Homepage Blob download failed with status ${response.status}.`)
+  }
+
+  const parsed = await response.json()
+  return homepageContentSchema.parse(parsed)
+}
+
 export async function readHomepageContent(): Promise<HomepageContent> {
+  if (hasBlobConfig()) {
+    try {
+      return await readHomepageContentFromBlob()
+    } catch (error) {
+      if (
+        error instanceof Error &&
+        (error.message.includes('not found') || error.message.includes('does not exist'))
+      ) {
+        return readHomepageContentFromFile()
+      }
+
+      throw error
+    }
+  }
+
+  return readHomepageContentFromFile()
+}
+
+async function readHomepageContentFromFile() {
   const file = await fs.readFile(contentPath, 'utf8')
   const parsed = JSON.parse(file)
   return homepageContentSchema.parse(parsed)
@@ -185,7 +222,33 @@ export async function readHomepageContent(): Promise<HomepageContent> {
 
 export async function writeHomepageContent(content: HomepageContent) {
   const parsed = homepageContentSchema.parse(content)
-  await fs.writeFile(contentPath, `${JSON.stringify(parsed, null, 2)}\n`, 'utf8')
+  const serialized = JSON.stringify(parsed)
+
+  if (hasBlobConfig()) {
+    await put(blobPath, serialized, {
+      access: 'public',
+      allowOverwrite: true,
+      contentType: 'application/json',
+      cacheControlMaxAge: 60,
+    })
+    return
+  }
+
+  try {
+    await fs.writeFile(contentPath, `${JSON.stringify(parsed, null, 2)}\n`, 'utf8')
+  } catch (error) {
+    if (
+      error instanceof Error &&
+      'code' in error &&
+      (error as NodeJS.ErrnoException).code === 'EROFS'
+    ) {
+      throw new Error(
+        'Homepage edits need writable storage in production. Configure Vercel Blob env var BLOB_READ_WRITE_TOKEN.'
+      )
+    }
+
+    throw error
+  }
 }
 
 export function validateHomepageContent(content: unknown) {
